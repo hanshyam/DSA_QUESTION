@@ -29,6 +29,13 @@ Node* insertHead(Node* head,int val){
     return new_Node;
 }
 
+Node* insertTail(Node* tail,int val){
+   Node* new_Node = new Node(val);
+   tail->next = new_Node;
+   tail = new_Node;
+   return tail;
+}
+
 int main() {
     
     vector<int> arr = {12, 8, 5, 7};
@@ -36,11 +43,12 @@ int main() {
 
     
     Node* head = new Node(arr[0]);
-    head->next = new Node(arr[1]);
-    head->next->next = new Node(arr[2]);
-    head->next->next->next = new Node(arr[3]);
+    Node* tail = head;
 
     
+    tail = insertTail(tail,arr[1]);
+    tail = insertTail(tail,arr[2]);
+    tail = insertTail(tail,arr[3]);
     head = insertHead(head, val);
 
    
