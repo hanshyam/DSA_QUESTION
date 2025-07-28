@@ -29,6 +29,14 @@ Node* insertHead(Node* head,int val){
     return new_Node;
 }
 
+void deleteHead(){
+    Node* temp = head;
+    head = head->next;
+    temp->data = NULL;
+    temp->next = NULL;
+    delete(temp);
+}
+
 Node* insertTail(Node* tail,int val){
    Node* new_Node = new Node(val);
    tail->next = new_Node;
@@ -45,7 +53,7 @@ int main() {
     Node* head = new Node(arr[0]);
     Node* tail = head;
 
-    
+
     tail = insertTail(tail,arr[1]);
     tail = insertTail(tail,arr[2]);
     tail = insertTail(tail,arr[3]);
