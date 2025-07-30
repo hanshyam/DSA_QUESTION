@@ -46,7 +46,7 @@ Node* insertTail(Node* tail,int val){
 
 int main() {
     
-    vector<int> arr = {12, 8, 5, 7};
+    vector<int> arr = {12, 8, 5, 7,9};
     int val = 100;
 
     
@@ -57,6 +57,7 @@ int main() {
     tail = insertTail(tail,arr[1]);
     tail = insertTail(tail,arr[2]);
     tail = insertTail(tail,arr[3]);
+    tail = insertTail(tail,arr[4]);
     head = insertHead(head, val);
 
    
