@@ -3,7 +3,8 @@ using namespace std;
 
 int upperBound(vector<int> &arr, int x, int n) {
     int low = 0, high = n - 1;
-    int ans = n;
+    int ans;
+    ans = n;
 
     while (low <= high) {
         int mid = (low + high) / 2;
